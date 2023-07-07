@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class ContactController extends Controller
 {
        function page(Request $request){
-
+        return view('pages.contact');
     }
 
     function contactRequest(Request $request){

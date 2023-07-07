@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('component.projects.-list')
+@include('component.projects-list')
 @include('component.call-action')
 
 @endsection

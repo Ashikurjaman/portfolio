@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 // Page Routes
 
 Route::get('/', [HomeController::class,'page']);
-Route::get('/', [ContactController::class,'page']);
-Route::get('/', [ProjectController::class,'page']);
-Route::get('/', [ResumeController::class,'page']);
+Route::get('/contact', [ContactController::class,'page']);
+Route::get('/project', [ProjectController::class,'page']);
+Route::get('/resume', [ResumeController::class,'page']);
 
 
 

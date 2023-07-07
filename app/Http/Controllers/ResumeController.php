@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class ResumeController extends Controller
 {
     function page(Request $request){
-
+        return view('pages.resume');
     }
 
     function resumeLink(Request $request){

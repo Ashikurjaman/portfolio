@@ -5,6 +5,6 @@
 @include('component.education')
 @include('component.professional-skill')
 @include('component.experince')
-@include('component.projects.-list')
+@include('component.projects-list')
 
 @endsection
