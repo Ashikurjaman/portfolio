@@ -39,3 +39,16 @@
         </div>
     </div>
 </section>
+
+
+<script>
+
+let contactForm = document.getelementbyid("contactForm")
+
+contactForm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+
+})
+
+
+</script>
