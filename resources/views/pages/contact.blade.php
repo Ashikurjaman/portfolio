@@ -2,6 +2,6 @@
 
 @section('content')
 
-@include('component.contact')
+@include('component.contact-form')
 
 @endsection

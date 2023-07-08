@@ -48,4 +48,4 @@ Route::get('/languageData',[ResumeController::class,'languageData']);
 
 
 //  Contact
-Route::get('/contacts',[ContactController::class,'contactRequest']);
+Route::post('/contacts',[ContactController::class,'contactRequest']);
