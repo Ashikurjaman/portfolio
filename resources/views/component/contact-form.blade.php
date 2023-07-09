@@ -43,14 +43,57 @@
 <script>
 
         let contactForm = document.getElementById('contactForm')
-        contactForm.addEventListener('submit', (event)=>{
+        contactForm.addEventListener('submit', async(event)=>{
             event.preventDefault();
             let name =document.getElementById('name').value;
-            alert(name);
-            let name =document.getElementById('email').value;
-            let name =document.getElementById('phone').value;
-            let name =document.getElementById('message').value;
 
+            let email =document.getElementById('email').value;
+            let phone =document.getElementById('phone').value;
+            let msg =document.getElementById('message').value;
+
+
+            if(name.length===0){
+                alert('Please enter your name');
+            }
+
+            else if(email.length===0){
+                            alert('Please enter your email');
+                        }
+
+                        else if(phone.length===0){
+
+                            alert('Please enter your phone number');
+                        }
+                        else{
+                            let formData ={
+                                    fullName:name,
+                                    email:email,
+                                    phone:phone,
+                                    massage:msg,
+                            }
+
+                            let url ="/contacts";
+
+                            // loader show
+                            document.getElementById('loading-div').classList.remove('d-none')
+                            document.getElementById('content-div').classList.add('d-none')
+
+
+                       let result=await axios.post(url,formData)
+
+                            // Loader hide
+                            document.getElementById('loading-div').classList.add('d-none')
+                            document.getElementById('content-div').classList.remove('d-none')
+
+                            if (result.status===200 && result.data===1){
+                                alert('Your request has been submitted');
+                                contactForm.reset();
+                            }
+                            else{
+                                alert('Something went wrong');
+                            }
+
+                        }
         })
 
 </script>
